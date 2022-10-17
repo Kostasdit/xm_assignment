@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="XM_exercise" parallel="tests" thread-count="2" verbose="10">
+    <parameter name="targetHostUrl" value="https://www.xm.com"/>
+    <parameter name="driverType" value="ChromeDriver"/>
+    <parameter name="resolution" value="800x600"/>
+    <parameter name="title" value="A New Hope"/>
+    <parameter name="characterName" value="Biggs Darklighter"/>
+
+
+    <test name="ui" preserve-order="true">
+        <classes>
+            <class name="com.xm.assignment.FirstTask"/>
+        </classes>
+    </test>
+
+    <test name="api" preserve-order="true">
+        <classes>
+            <class name="com.xm.assignment.SecondTask"/>
+        </classes>
+    </test>
+
+
+
+</suite>
